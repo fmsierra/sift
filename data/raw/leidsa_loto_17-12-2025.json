@@ -1,0 +1,23 @@
+{
+    "date": "17-12-2025",
+    "day_of_week": "Wednesday",
+    "game": "Loto - Super Loto Más",
+    "winning_numbers": [
+        "01",
+        "02",
+        "15",
+        "29",
+        "34",
+        "40"
+    ],
+    "special_numbers": [
+        {
+            "value": "12",
+            "type": "special2"
+        },
+        {
+            "value": "12",
+            "type": "special1"
+        }
+    ]
+}
