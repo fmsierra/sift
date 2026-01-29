@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files (keep structure, ignore actual data)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.npy
+data/predictions/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/predictions/.gitkeep
+
+# Trained models
+models/*.joblib
+models/*.pkl
+!models/.gitkeep
+
+# Reports and figures
+reports/figures/*.png
+reports/figures/*.jpg
+reports/figures/*.pdf
+reports/metrics/*.json
+reports/metrics/*.csv
+!reports/figures/.gitkeep
+!reports/metrics/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

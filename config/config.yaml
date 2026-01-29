@@ -1,0 +1,39 @@
+# =============================================================================
+# Predictive Analytics System - Configuration
+# =============================================================================
+
+# Data Settings
+data:
+  raw_path: "data/raw/dataset.csv"           # Path to input CSV
+  processed_path: "data/processed/"           # Directory for processed data
+  predictions_path: "data/predictions/"       # Directory for predictions output
+  expected_columns: 6                         # Number of target columns
+  
+# Preprocessing Settings
+preprocessing:
+  window_size: 15                             # Lag features (how far back to look)
+  normalize: true                             # Apply MinMax scaling (0-1)
+  train_split: 0.90                           # 90% train, 10% test
+  
+# Model Settings (HistGradientBoostingRegressor)
+model:
+  max_iter: 100                               # Number of boosting iterations
+  max_depth: 10                               # Maximum tree depth (prevents overfitting)
+  learning_rate: 0.1                          # Step size shrinkage
+  min_samples_leaf: 20                        # Minimum samples per leaf
+  l2_regularization: 0.1                      # L2 regularization strength
+  random_state: 42                            # Reproducibility seed
+  early_stopping: true                        # Enable early stopping
+  validation_fraction: 0.1                    # Fraction for early stopping validation
+  n_iter_no_change: 10                        # Patience for early stopping
+  
+# Output Paths
+output:
+  model_path: "models/predictor.joblib"       # Saved model location
+  figures_path: "reports/figures/"            # EDA and evaluation plots
+  metrics_path: "reports/metrics/"            # Evaluation metrics
+
+# Logging
+logging:
+  level: "INFO"                               # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
